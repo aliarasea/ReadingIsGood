@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "1c318116-3707-444a-9c9d-fe7fb5e0f572",
+		"name": "ReadingIsGood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "book save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\" : \"{{$randomInt}}\",\n    \"title\" : \"{{$randomWord}}\",\n    \"summary\" : \"{{$randomWords}}\",\n    \"categoryId\" : \"{{$randomInt}}\",\n    \"numberOfPage\" : \"{{$randomInt}}\",\n    \"country\" : \"{{$randomCountry}}\",\n    \"price\" : \"{{$randomPrice}}\",\n    \"publisher\" : \"{{$randomDepartment}}\",\n    \"author\" : \"{{$randomFullName}}\",\n    \"language\" : \"{{$randomCountryCode}}\",\n    \"stock\": \"{{$randomInt}}\",\n    \"creator\": \"{{$randomUserName}}\",\n    \"createdAt\": \"{{$timestamp}}\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7676/api/book/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7676",
+					"path": [
+						"api",
+						"book",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"{{$randomFirstName}}\",\n    \"lastname\": \"{{$randomLastName}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"creator\": \"{{$randomUserName}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7675/api/customer/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7675",
+					"path": [
+						"api",
+						"customer",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\": \"\",\n    \"customerId\": \"\",\n    \"bookIdList\": \"\",\n    \"status\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://:7676/api/order/save",
+					"protocol": "http",
+					"port": "7676",
+					"path": [
+						"api",
+						"order",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7676/api/statistic/supply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7676",
+					"path": [
+						"api",
+						"statistic",
+						"supply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
